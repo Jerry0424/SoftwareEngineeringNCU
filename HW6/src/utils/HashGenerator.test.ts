@@ -25,8 +25,8 @@ describe('HashGenerator', () => {
     const mockMathRandom = jest.spyOn(Math, 'random');
     mockMathRandom.mockReturnValue(0.5); 
 
-    const zeroString = '000-00-00000-00-0';
-    expect( hashGenerator.simpleISBN(zeroString)).toMatch(/^\d{3}-\d{2}-\d{5}-\d{2}-\d{1}$/);
+    const pattern = 'edu-ncu-csie-msf';
+    expect( hashGenerator.simpleISBN(pattern)).toMatch(/^\d{3}-\d{3}-\d{4}-\d{3}$/);
 
     mockMathRandom.mockRestore(); 
   });
