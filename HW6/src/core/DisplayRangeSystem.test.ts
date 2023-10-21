@@ -22,16 +22,16 @@ describe("Need implement", () => {
 
 
     test("should throw an error for a non-negative integer range", () => {
-        expect(() => {displayRangeSystem.setRange(0);}).toThrow('Cannot be less than 0');
+        expect(() => {displayRangeSystem.setRange(-1, 0);}).toThrow('Cannot be less than 0');
     });
     
     test("should throw an error for a float number range", () => {
-        expect(() => {displayRangeSystem.setRange(2.5);}).toThrow('Invalid Float Input');
+        expect(() => {displayRangeSystem.setRange(2.5, 8);}).toThrow('Invalid Float Input');
     });
 
 
     test("should throw an error for Invalid String Input", () => {
-        expect(() => {displayRangeSystem.setRange('InvalidString');}).toThrow('Invalid String Input');
+        expect(() => {displayRangeSystem.setRange('InvalidString', 5);}).toThrow('Invalid String Input');
     });
     
     test("should throw an error if the endRange is less than startRange", () => {
