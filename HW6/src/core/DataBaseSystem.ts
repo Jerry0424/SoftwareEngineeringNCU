@@ -59,7 +59,7 @@ export class DataBaseSystem extends BaseSystem {
                     author: author,
                 });
             }
-            else {
+            if (!title || !author) {
                 throw new Error("Title or Author cannot be null");
             }
         }
