@@ -16,6 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "simple-notify": "^0.5.5",
+    "sinon": "^17.0.0",
     "typescript": "^4.8.4"
   },
   "devDependencies": {
